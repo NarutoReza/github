@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <script>
+        function test(){
+            var myinputarr = [];
+            var size = 5; // Array size
+            
+            for(var a=0; a<size; a++) 
+            {
+                myinputarr[a] = prompt('Enter array Element ' + (a+1));
+            }
+            
+            document.getElementById("test").innerHTML = myinputarr;
+        }
+    </script>
+
+    <body>
+        <p id="test"></p>
+        <button onclick="test()">Calculate</button>
+    </body>
+</html>

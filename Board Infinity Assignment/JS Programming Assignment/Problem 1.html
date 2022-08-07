@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .box{
+        width: 500px;
+        height: 200px;
+        margin: 25px 0px 0px 0px;
+        padding: 50px 20px 20px 20px;
+        background-image: url(https://drive.google.com/thumbnail?id=1_IAcDVpbejtU9kA_N5FZX8y_R69i5lHr);
+        border-radius: 5px;
+        box-shadow: 0px 5px 5px 0px #000000;
+    }
+
+    #lab{
+        margin-right: 20px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #num{
+        border: 2px solid green;
+        border-radius: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #sub{
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: midnightblue;
+        color: aliceblue;
+        font-family: 'Ubuntu', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <a href=""></a>
+    </div>
+    <center>
+        <div class="box">
+            <!--input-->
+            <label for="number" id="lab"><b>Enter a real number to get factorial</b></label>
+            <input type="text" name="number" placeholder="Enter the numerical" id="num" required>
+    
+            <!--button to get output-->
+            <br><br>
+            <button type="submit" id="sub" onclick="result()">Calculate</button>
+
+            <!--output-->
+            <br><br>
+            <a id="res"><b></b></a>
+
+            <!--my github id-->
+            <br><br>
+            <a href="https://github.com/NarutoReza/github">By <b>Hesham Reza</b></a>
+        </div>
+    </center>
+
+    <script>
+        function result(){
+            //declaring variables
+            var a, b = 1, i;
+
+            //getting input
+            a = parseInt(document.getElementById("num").value);
+
+            //logic part
+            for(i=1; i<=a; i++){
+                b = b*i;
+            }
+
+            //the output
+            document.getElementById("res").innerHTML = "The factorial of " + a + " is " + b + ".";
+        }
+    </script>
+</body>
+</html>
